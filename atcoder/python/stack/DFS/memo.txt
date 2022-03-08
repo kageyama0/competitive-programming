@@ -1,0 +1,8 @@
+dfs(スタート):
+  yield
+  yield
+  yield
+  return
+
+複数の値を返して欲しいならyieldを使う?
+=> list にappendして最後にprintする時に改行コード入れるだけでいいか別に
