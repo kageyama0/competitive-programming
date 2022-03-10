@@ -13,13 +13,13 @@ for i in range(2, 10, 2):
     # https://stackoverflow.com/questions/3929278/what-does-ior-do-in-python
     # |= : これは、setに新しい項目を追加する方法。ORの意味。
     dp[i] |= set('(' + S + ')' for S in dp[i - 2])
-    #print("before dp[i]:",i,dp[i])
+    # print("before dp[i]:",i,dp[i])
 
     for l in range(2, i, 2):
         r = i - l
         dp[i] |= set(SL + SR for SL in dp[l] for SR in dp[r])
 
-    #print("after dp[i]:",i,dp[i])
+    # print("after dp[i]:",i,dp[i])
 
 ANS = sorted(dp[n])
 

@@ -1,8 +1,10 @@
-n,l = map(int, input().split())
+n, l = map(int, input().split())
 k = int(input())
 A = list(map(int, input().split())) + [l]
 
 # 最小の羊羹がある長さ(length)よりも、何個に分けられるか？
+
+
 def check(length):
     # 端に行くまでに分けれる数
     cnt = 0

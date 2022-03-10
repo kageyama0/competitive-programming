@@ -1,4 +1,4 @@
-n,m = map(int,input().split())
+n, m = map(int, input().split())
 
 # 余ってる c の数
 dif = m - 2 * n

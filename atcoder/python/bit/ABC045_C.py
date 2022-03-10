@@ -1,4 +1,4 @@
-#https://atcoder.jp/contests/abc045/tasks/arc061_a
+# https://atcoder.jp/contests/abc045/tasks/arc061_a
 
 s = input()
 cnt = len(s)-1
@@ -10,7 +10,7 @@ for i in range(2 ** cnt):
     for j in range(cnt):
         if (i >> j & 1):
             sign[j] = "+"
-            
+
     formula = ""
     for k in range(cnt):
         formula += s[k] + sign[k]

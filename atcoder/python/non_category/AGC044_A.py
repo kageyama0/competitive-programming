@@ -1,2 +1,2 @@
 t = int(input())
-for 
+for

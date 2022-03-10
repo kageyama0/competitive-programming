@@ -27,6 +27,6 @@ for i in range(na + 1):
         else:
             dp[i][j] = sa[i] + sb[j] - min(dp[i - 1][j], dp[i][j - 1])
 
-        print(i,j,dp[i][j])
+        print(i, j, dp[i][j])
 
 print(dp[na][nb])

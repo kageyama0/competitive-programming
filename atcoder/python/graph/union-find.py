@@ -41,17 +41,17 @@ class UnionFind():
 
 
 uf = UnionFind(n)
-#print(uf.parents)
+# print(uf.parents)
 
 for _ in range(m):
     x, y = map(int, input().split())
     uf.union(x-1, y-1)
 
-#print(uf.members(0))
+# print(uf.members(0))
 
 for i in range(n):
-  if not i in uf.members(0):
-    print("No")
-    exit()
+    if not i in uf.members(0):
+        print("No")
+        exit()
 
 print("Yes")

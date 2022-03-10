@@ -20,13 +20,15 @@ def main():
         now = heapq.heappop(q)
         visited[now] = 1
         ans.append(now)
-        #print(q)
+        print("now:",now)
         for next in graph[now]:
             print("next:", next)
             print("visited:", visited)
             if visited[next]:
                 continue
             heapq.heappush(q,next)
+        print(q)
+
     print(" ".join(map(str,ans)))
 
 

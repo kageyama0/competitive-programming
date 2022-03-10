@@ -3,7 +3,7 @@ n = int(input())
 # 現在の文字:s
 # 使える左括弧の数:i
 # 使える右括弧の数:j
-def dfs(s,left,right):
+def dfs(s, left, right):
 
     # 左括弧と右括弧を使い切った場合に、出力
     if left == right == 0:

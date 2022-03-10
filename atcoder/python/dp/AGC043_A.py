@@ -3,7 +3,7 @@ def main():
     field = [list(input()) for _ in range(h)]
     dp = [[float('inf')] * w for _ in [0] * h]
     dp[0][0] = (field[0][0] == "#")
-    #print(dp)
+    # print(dp)
     for i in range(h):
         for j in range(w):
             if i > 0:
@@ -13,6 +13,7 @@ def main():
                 dp[i][j] = min(dp[i][j], dp[i][j - 1] +
                                (field[i][j - 1] == "." and field[i][j] == "#"))
     print(dp[-1][-1])
+
 
 if __name__ == "__main__":
     main()
