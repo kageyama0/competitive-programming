@@ -4,4 +4,4 @@ from itertools import product
 n = int(input())
 ans = list(product(["a", "b", "c"], repeat=n))
 for a in ans:
-  print("".join(a))
+    print("".join(a))
