@@ -1,3 +1,5 @@
+# TODO: 結局手つけてない
+
 S = list(input())
 Q = int(input())
 
