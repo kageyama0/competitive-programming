@@ -1,13 +1,13 @@
 # https://atcoder.jp/contests/typical90/tasks/typical90_f
 # 参考: https://github.com/E869120/kyopro_educational_90/blob/main/sol/006.cpp
 # 辞書順に文字を決める
-
+# 方針：桁DP
 n, k = map(int, input().split())
 S = list(input())
 nex = [[0] * 26 for _ in range(n+1)]
 for i in range(26):
     nex[n][i] = n
-# print(nex)
+print(nex)
 
 for i in range(n-1, -1, -1):
     for j in range(26):
@@ -15,7 +15,7 @@ for i in range(n-1, -1, -1):
             nex[i][j] = i
         else:
             nex[i][j] = nex[i+1][j]
-# print(nex)
+print(*nex,sep="\n")
 
 ans = ""
 current_pos = 0

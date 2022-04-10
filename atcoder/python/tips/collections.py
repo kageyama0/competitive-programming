@@ -5,6 +5,4 @@ from collections import deque
 
 # https://qiita.com/xza/items/72a1b07fcf64d1f4bdb7#defaultdict-%E3%81%AE-%E5%88%A9%E7%94%A8
 from collections import defaultdict
---> ABC152-D.py
-
-
+# --> ABC152-D.py
