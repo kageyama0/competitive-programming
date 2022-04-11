@@ -1,3 +1,5 @@
+# https://atcoder.jp/contests/dp/tasks/dp_a
+
 N = int(input())
 h = list(map(int, input().split()))
 dp = [0] * N

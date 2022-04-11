@@ -10,6 +10,7 @@ dp = np.zeros(k + 1)
 
 for i in range(n):
     w, c = map(int, readline().split())
+    print(dp[w:], dp[:-w])
     dp[w:] = np.maximum(dp[w:], dp[:-w] + c)
-
+print(dp)
 print(int(dp[-1]))

@@ -1,4 +1,4 @@
-# dpがn個じゃなーい
+# https://atcoder.jp/contests/dp/tasks/dp_c
 
 n = int(input())
 abc = [list(map(int, input().split())) for _ in range(n)]
