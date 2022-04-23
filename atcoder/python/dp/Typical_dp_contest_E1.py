@@ -15,15 +15,15 @@ for i in n:
 
     dp2 = [0]*d
     dp, dp2 = dp2, dp
-    print("dp,dp2:",dp, dp2)
+    print("dp,dp2:", dp, dp2)
 
     for j in range(d):
         for k in range(10):
-            print(j,k,dp[(j+k) % d],dp2[j])
+            print(j, k, dp[(j+k) % d], dp2[j])
             dp[(j+k) % d] += dp2[j]
             dp[(j+k) % d] %= mod
 
-        print("dp:",dp)
+        print("dp:", dp)
 
     for j in range(int(i)):
         dp[(tmp+j) % d] += 1

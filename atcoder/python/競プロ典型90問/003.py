@@ -44,5 +44,5 @@ while q:
         q.append(next)
         rank[next] = rank[now] + 1
 
-ans = np.amax(cnt) + 1
+ans = np.amax(rank) + 1
 print(ans)

@@ -1,5 +1,6 @@
 # https://atcoder.jp/contests/typical90/tasks/typical90_f
 # 辞書順に文字を決める
+# 貪欲法
 
 from collections import deque
 n, k = map(int,input().split())

@@ -1,4 +1,5 @@
 # https://atcoder.jp/contests/typical90/tasks/typical90_e
+# 桁DP
 
 MOD = (10 ** 9) + 7
 N, B, K = map(int, input().split())

@@ -1,4 +1,3 @@
-generator object <genexpr>
 n = int(input())
 
 # nが奇数の場合、出力できるカッコはない
