@@ -1,24 +1,43 @@
-from collections import Counter
-
-def make_divisors(n):
-    lower_divisors , upper_divisors = [], []
-    i = 1
-    while i*i <= n:
-        if n % i == 0:
-            lower_divisors.append(i)
-            if i != n // i:
-                upper_divisors.append(n//i)
-        i += 1
-    return lower_divisors + upper_divisors[::-1]
+import numpy as np
+import bisect
+import math
 
 N = int(input())
-A = list(map(int, input().split()))
-c = dict(Counter(A))
-# print(c)
+if N < 54:
+    print(0)
+    exit()
+
+
+def seachPrimeNum(N):
+    max = int(np.sqrt(N))
+    seachList = [i for i in range(2, N+1)]
+    primeNum = []
+    while seachList[0] <= max:
+        primeNum.append(seachList[0])
+        tmp = seachList[0]
+        seachList = [i for i in seachList if i % tmp != 0]
+    primeNum.extend(seachList)
+    return primeNum
+
+
+NUMS = seachPrimeNum(10**6)
+
+l = len(NUMS)
+# print(l)
 
 cnt = 0
-for i in range(N):
-    divs = make_divisors(A[i])
-    for div in divs:
-        cnt += c.get(div, 0) * c.get(A[i]//div, 0)
+for p_index in range(l-1):
+    p = NUMS[p_index]
+    close_to_q_num = math.ceil((N / p)**(1/3))
+    q_index = bisect.bisect_left(NUMS, close_to_q_num)
+    if q_index > p_index:
+        while True:
+            q = NUMS[q_index]
+            if p * (q ** 3) <= N:
+                break
+            q_index -= 1
+
+        cnt += q_index - p_index
+
+
 print(cnt)

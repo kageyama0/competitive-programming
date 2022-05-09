@@ -1,31 +1,19 @@
-# N < 15なので、ゴリゴリやる
+N, Q = map(int, input().split())
 
-from collections import defaultdict
-from itertools import combinations
-N, K = map(int, input().split())
-S = [input() for _ in range(N)]
+X_INDEX = [i for i in range(N+1)]
+NUMS = [i for i in range(N+1)]
 
-ans = 0
+for _ in range(Q):
+    x = int(input())
+    x_index = X_INDEX[x]
+    x_num = NUMS[x_index]
 
-for i in range(K, N+1):
-    comb = combinations(range(N), i)
-    # c: N個の中からi個選ぶ組み合わせ
-    for c in comb:
-        d = defaultdict(int)
-        # print(c)
-        cnt = 0
-        # 計算された組み合わせにあるインデックスを用いて、実際に数え上げる文字列を選択
-        for index in c:
-            # 実際の文字列を１つ１つ見ていく
-            for st in S[index]:
-                d[st] += 1
+    y_index = x_index + 1 if x_index < N else x_index - 1
+    # print(x_index, y_index, X_INDEX, NUMS)
+    y_num = NUMS[y_index]
+    NUMS[x_index] = y_num
+    NUMS[y_index] = x_num
+    X_INDEX[x_num] = y_index
+    X_INDEX[y_num] = x_index
 
-        # print(d)
-        for val in d.values():
-            if val == K:
-                cnt += 1
-
-        ans = max(ans, cnt)
-
-
-print(ans)
+print(" ".join(map(str,NUMS[1:])))
