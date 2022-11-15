@@ -2,11 +2,12 @@
 # 2桁 --> (××,××)、(×,××) or (××,×) 9 * 3 = 27 / (△×,×△) 9*9-9 = 72
 # 3桁 --> (×△×,×□×)、(×△×,××) or (××,×□×), (×,×□×) or (×□×,×)
 import sys
+from collections import defaultdict
+
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
 
-from collections import defaultdict
 
 n = int(read())
 
