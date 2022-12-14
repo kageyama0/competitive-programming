@@ -1,7 +1,8 @@
 from collections import Counter
 
+
 def main():
-    n = int(input())
+    _ = int(input())
     A = list(map(int, input().split()))
 
     # 複数の同じ値がある場合は消去、

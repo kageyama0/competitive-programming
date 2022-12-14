@@ -2,6 +2,7 @@
 # L以上R以下で当てはまるものの数を探す ＝ L,Rの入る位置の差を求める
 
 from bisect import bisect_left, bisect_right
+
 N = int(input())
 A = list(map(int, input().split()))
 Q = int(input())

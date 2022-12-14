@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 def main():
     n = int(input())
     d = defaultdict(int)
@@ -13,7 +15,6 @@ def main():
     for (head, tail), cnt in l:
         ans = cnt * d[(tail, head)]
     print(ans)
-
 
 
 if __name__ == "__main__":

@@ -1,18 +1,14 @@
 from collections import deque
 
-
-from collections import deque
-
 Q = int(input())
 
 q = deque([])
 
 for _ in range(Q):
-    query = list(map(int,input().split()))
+    query = list(map(int, input().split()))
     # [xの球、n個]
     if query[0] == 1:
         q.append([query[1], query[2]])
-
 
     elif query[0] == 2:
         c = query[1]
@@ -26,7 +22,6 @@ for _ in range(Q):
             p_c = p[1]
             # print("取り出そうとしている球:", p_x)
             # print("取り出そうとしている球の個数:", p_c)
-
 
             # 取り出そうとしている球よりも連続していれたXの数の方が多い場合
             if p_c > c:

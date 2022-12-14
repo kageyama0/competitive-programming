@@ -7,7 +7,7 @@ a = [0] + list(map(int, input().split()))
 def loop(now, town):
     cnt = 0
     while True:
-        #print(now)
+        # print(now)
         next = a[now]
         if town[next] == 1:
             cnt += 1

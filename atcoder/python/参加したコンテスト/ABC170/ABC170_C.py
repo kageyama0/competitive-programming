@@ -6,20 +6,19 @@ def main():
     if len(P) == 0:
         print(x)
         exit()
-    if not x in P:
+    if x not in P:
         print(x)
         exit()
 
     while True:
         m -= 1
         M += 1
-        if not m in P:
+        if m not in P:
             print(m)
             exit()
-        if not M in P:
+        if M not in P:
             print(M)
             exit()
-
 
 
 if __name__ == "__main__":

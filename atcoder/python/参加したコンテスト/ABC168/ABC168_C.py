@@ -1,5 +1,7 @@
 import math
-import numpy
+
+import numpy as np
+
 a, b, h, m = map(int, input().split())
 
 # h *= 30

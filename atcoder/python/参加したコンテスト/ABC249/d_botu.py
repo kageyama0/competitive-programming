@@ -1,6 +1,6 @@
 from collections import Counter
-from operator import mul
 from functools import reduce
+from operator import mul
 
 
 def cmb(n, r):
@@ -51,7 +51,6 @@ for k, v in c.items():
 print(cnt)
 
 
-
 # それ以外の場合、
 B = [k for k in c.keys()]
 B.sort()
@@ -60,7 +59,7 @@ for i in range(1, l):
     for j in range(i+1, l):
         x, y = B[i], B[j]
         z = x*y
-        z_cnt = c.get(z,0)
+        z_cnt = c.get(z, 0)
         cnt += z_cnt * c[x] * c[y] * 2
 
 

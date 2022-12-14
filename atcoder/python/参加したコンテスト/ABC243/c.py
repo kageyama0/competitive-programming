@@ -22,7 +22,6 @@ for i in range(n):
         else:
             right_people[y_pos] = x_pos
 
-
     # i番目の人間が左を向いている時
     else:
         # iさんと同じY座標上にいて右を向いている人間が存在する

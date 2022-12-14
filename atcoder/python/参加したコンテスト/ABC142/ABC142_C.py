@@ -4,13 +4,14 @@ def main():
     lis = []
     for i, num in enumerate(A):
         lis.append([i + 1, num])
-    #print(lis)
+    # print(lis)
 
     B = sorted(lis, key=lambda x: x[1])
-    #print(B)
+    # print(B)
 
     for x, _ in B:
         print(x, end=" ")
+
 
 if __name__ == "__main__":
     main()

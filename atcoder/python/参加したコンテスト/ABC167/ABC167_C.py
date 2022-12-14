@@ -1,5 +1,6 @@
-import numpy as np
 from itertools import combinations
+
+import numpy as np
 
 n, m, x = map(int, input().split())
 lis = [list(map(int, input().split())) for _ in range(n)]

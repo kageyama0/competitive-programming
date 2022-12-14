@@ -1,14 +1,12 @@
 # 演算子オーバーロード系はDecimalでくるむ
-from decimal import *
+import decimal
+
 
 def main():
     a, b = input().split()
-    a = Decimal(a)
-    b = Decimal(b)
+    a = decimal.Decimal(a)
+    b = decimal.Decimal(b)
     print(a * b)
-
-
-
 
 
 if __name__ == "__main__":

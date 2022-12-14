@@ -1,6 +1,7 @@
-#値がデカくなりすぎると、正しい値にならないので素因数分解した状態にしておくらしい
+# 値がデカくなりすぎると、正しい値にならないので素因数分解した状態にしておくらしい
 
 from fractions import gcd
+
 
 def lcm(x, y):
     return (x * y) // gcd(x, y)
@@ -18,7 +19,6 @@ def main():
     for i in range(n):
         ans += (m / A[i]) % MOD
     print(ans)
-
 
 
 if __name__ == "__main__":

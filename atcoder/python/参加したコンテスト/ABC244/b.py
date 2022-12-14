@@ -1,9 +1,9 @@
 N = int(input())
 T = input()
 
-dir = [[1,0],[0,-1],[-1,0],[0,1]]
+dir = [[1, 0], [0, -1], [-1, 0], [0, 1]]
 now_dir = 0
-now_x, now_y = 0,0
+now_x, now_y = 0, 0
 for i in range(N):
     st = T[i]
 

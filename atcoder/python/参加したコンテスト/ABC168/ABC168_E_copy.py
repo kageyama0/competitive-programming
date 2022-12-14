@@ -2,8 +2,9 @@
 # Your code here!
 # https://atcoder.jp/contests/abc168/submissions/13322207
 
-from math import gcd
 import sys
+from math import gcd
+
 readline = sys.stdin.readline
 read = sys.stdin.read
 
@@ -47,15 +48,13 @@ pow2 = [1]
 for _ in range(200005):
     pow2.append(pow2[-1]*2 % MOD)
 
-#print(d)
+# print(d)
 for (a, b), (k, l) in d.items():
     ans *= pow2[k]+pow2[l]-1
     ans %= MOD
 
 ans += zero-1
 print(ans % MOD)
-
-
 
 
 # from itertools import combinations

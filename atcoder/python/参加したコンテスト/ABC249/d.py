@@ -1,7 +1,8 @@
 from collections import Counter
 
+
 def make_divisors(n):
-    lower_divisors , upper_divisors = [], []
+    lower_divisors, upper_divisors = [], []
     i = 1
     while i*i <= n:
         if n % i == 0:
@@ -10,6 +11,7 @@ def make_divisors(n):
                 upper_divisors.append(n//i)
         i += 1
     return lower_divisors + upper_divisors[::-1]
+
 
 N = int(input())
 A = list(map(int, input().split()))

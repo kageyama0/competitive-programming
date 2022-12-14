@@ -1,6 +1,7 @@
-import numpy as np
 import bisect
 import math
+
+import numpy as np
 
 N = int(input())
 if N < 54:

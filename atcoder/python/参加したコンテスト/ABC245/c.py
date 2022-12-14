@@ -5,7 +5,7 @@ B = list(map(int, input().split()))
 dp = [set() for _ in range(N)]
 dp[0] = [A[0], B[0]]
 
-for i in range(1,N):
+for i in range(1, N):
     a = A[i]
     b = B[i]
     for x in dp[i-1]:

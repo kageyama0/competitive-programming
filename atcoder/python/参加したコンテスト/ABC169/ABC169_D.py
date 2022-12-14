@@ -1,5 +1,6 @@
 import collections
 
+
 def prime_factorize(n):
     a = []
     while n % 2 == 0:
@@ -24,17 +25,18 @@ def main():
         exit()
 
     d = collections.Counter(prime_factorize(n))
-    #print(d)
+    # print(d)
 
     ans = 0
     for _, cnt in d.items():
         now = 1
         while cnt >= now:
-            #print("cnt:",cnt,"now:",now)
+            # print("cnt:",cnt,"now:",now)
             cnt -= now
             now += 1
             ans += 1
     print(ans)
+
 
 if __name__ == "__main__":
     main()

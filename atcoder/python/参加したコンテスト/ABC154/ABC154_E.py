@@ -1,4 +1,5 @@
-// 桁DP
+# 桁DP
+from collections import defaultdict
 n = int(input())
 k = input()
 

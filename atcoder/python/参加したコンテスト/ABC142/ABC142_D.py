@@ -1,5 +1,6 @@
 def isPrime(n):
 
+
 def gcd(a, b):
     while b:
         a, b = b, a % b
@@ -23,9 +24,6 @@ def main():
     g = gcd(a, b)
     ans = [1]
     for i in range(2, g ** .5+1):
-        
-
-
 
 
 if __name__ == "__main__":

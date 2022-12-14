@@ -9,5 +9,6 @@ def main():
             m = P[i]
     print(cnt)
 
+
 if __name__ == "__main__":
     main()

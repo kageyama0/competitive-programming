@@ -1,4 +1,5 @@
 import math
+
 N = int(input())
 
 # ある程度当たりをつける。N付近になるような数を探す。

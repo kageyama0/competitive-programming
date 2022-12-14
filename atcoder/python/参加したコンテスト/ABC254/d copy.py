@@ -15,12 +15,12 @@ def calc(x):
         return 1
 
     divisors = calc_divisor(x)
-    print(divisors)
+    # print(divisors)
 
     cnt = 0
     for d in divisors:
         if d == x:
-            print()
+            print(d)
             cnt += 1
         else:
             if x**2 // d <= n:
@@ -33,6 +33,6 @@ def calc(x):
 ans = 0
 for i in range(1, n+1):
     ans += calc(i)
-    print(f"ans:{ans}")
+    # print(f"ans:{ans}")
 
 print(ans)

@@ -14,11 +14,11 @@ q = deque()
 q.append(1)
 while q:
     now = q.popleft()
-    #print("now:", now)
+    # print("now:", now)
     visited[now] = 1
     for next in G[now]:
-        #print("next:", next)
-        #print("visited:", visited)
+        # print("next:", next)
+        # print("visited:", visited)
         if visited[next]:
             continue
         q.append(next)

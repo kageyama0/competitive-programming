@@ -16,4 +16,4 @@ for _ in range(Q):
     X_INDEX[x_num] = y_index
     X_INDEX[y_num] = x_index
 
-print(" ".join(map(str,NUMS[1:])))
+print(" ".join(map(str, NUMS[1:])))

@@ -1,4 +1,5 @@
 import math
+
 n, k = map(int, input().split())
 
 if n < k:
@@ -8,7 +9,7 @@ if n < k:
         print(n)
 else:
     s = math.ceil(n / k)
-    ans = abs(n - s  * k)
+    ans = abs(n - s * k)
     while True:
         x = abs(ans - k)
         if x > ans:

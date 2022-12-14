@@ -12,7 +12,6 @@ for i in range(N+1):
         x = i
 
 
-
 for i in range(x+M+1):
     # Ci = A0Bi + A1Bi-1 + .... + AiB0 だから
     # Bi = (Ci - A1Bi-1 + .... + AiB0 ) / A0

@@ -22,7 +22,7 @@ for i in range(1, n + 1):
         dis += 1
         for g in graph[now]:
             q.append(g)
-        print(q,ans)
+        print(q, ans)
 
 print(ans)
 

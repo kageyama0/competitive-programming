@@ -21,5 +21,6 @@ def main():
         cnt = mid_B - mid_A + 1
     print(cnt)
 
+
 if __name__ == "__main__":
     main()

@@ -1,6 +1,3 @@
-from collections import deque
-
-
 def culc(dir, x):
     if dir == "L":
         x *= 2

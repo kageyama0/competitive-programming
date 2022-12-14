@@ -1,9 +1,10 @@
-import math
+
 
 def gcd(a, b):
     while b:
         a, b = b, a % b
     return a
+
 
 n = int(input())
 ans = n * (n + 1) // 2
