@@ -15,7 +15,7 @@ for i in range(n-1, -1, -1):
             nex[i][j] = i
         else:
             nex[i][j] = nex[i+1][j]
-print(*nex,sep="\n")
+print(*nex, sep="\n")
 
 ans = ""
 current_pos = 0
@@ -29,7 +29,6 @@ for i in range(1, k+1):
             break
 
 print(ans)
-
 
 
 # ボツ
