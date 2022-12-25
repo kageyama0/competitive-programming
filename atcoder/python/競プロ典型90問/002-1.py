@@ -14,7 +14,7 @@ from itertools import product
 N = int(input())
 
 
-# 左括弧があれば+1, 右括弧があれば-1, 途中で値が負になればNGだし、最後に0になっていくてもNG
+# 左括弧があれば+1, 右括弧があれば-1, 途中で値が負になればNGだし、最後に0になっていなくてもNG
 def isvalid(S):
     score = 0
     for c in S:
@@ -32,7 +32,9 @@ def isvalid(S):
 # a = list(product(["(", ")"], repeat=N))
 # print(*a, sep="\n")
 
+
+# 括弧を用いて作ることができるありうる全ての文字列を生成する
 for bit in product(["(", ")"], repeat=N):
+    # 生成した文字列が有効なものかを判定する
     if (isvalid(bit)):
-        # リストを文字列に
         print(*bit, sep='')

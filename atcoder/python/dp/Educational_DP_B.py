@@ -1,5 +1,6 @@
 # https://atcoder.jp/contests/dp/tasks/dp_b
 
+
 N, K = map(int, input().split())
 h = list(map(int, input().split()))
 dp = [0] + [None] * (N - 1)

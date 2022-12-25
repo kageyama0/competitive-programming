@@ -1,6 +1,7 @@
 # https: // atcoder.jp/contests/abc165/tasks/abc165_c
 
 from itertools import combinations_with_replacement
+
 # n個の数列、1~mの中で数列を作る
 # 2<=n<=10
 # 1<=m<=10

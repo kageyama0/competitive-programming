@@ -9,7 +9,7 @@ for i in range(N):
     S[C-1][i+1] = P
 
 # print(S)
-S = [list(accumulate(S[0])),list(accumulate(S[1]))]
+S = [list(accumulate(S[0])), list(accumulate(S[1]))]
 # print(S)
 
 

@@ -4,10 +4,11 @@ p = [0] + list(map(int, input().split()))
 root = list(range(n + 1))
 depth = [0] * (n + 1)
 
-# 連結成分を作る
-
 
 def find_root(x):
+    """
+    連結成分を作る
+    """
     y = root[x]
     if x == y:
         return y
