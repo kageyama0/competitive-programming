@@ -1,5 +1,4 @@
 # https://www.sejuku.net/blog/23318
-
 import itertools
 
 n, m = map(int, input().split())
@@ -9,7 +8,8 @@ for _ in range(m):
     graph[a][b] = True
     graph[b][a] = True
 
-Max = 0
+
+MAX = 0
 # 1をnだけ左にずらす
 # ex) 1<<4 = b10000 = 16
 #     0 ~ (1<<n - 1) = 15
@@ -25,5 +25,5 @@ for bit in range(1 << n):
         if not graph[x][y]:
             break
     else:
-        Max = max(Max, len(lis))
-print(Max)
+        MAX = max(MAX, len(lis))
+print(MAX)
