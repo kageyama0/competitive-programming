@@ -10,8 +10,12 @@ def ok(last4):
 
     return True
 
-# cur:現在の文字数、last3:最後３文字
+
 def dfs(cur, last3):
+    """
+    cur: 現在の文字数
+    last3: 最後３文字
+    """
     if last3 in memo[cur]:
         return memo[cur][last3]
 
@@ -31,7 +35,6 @@ def main():
     global n, MOD, memo
     n = int(input())
     MOD = 10 ** 9 + 7
-    ans = 4 ** n
     memo = [{} for i in range(n + 1)]
     print(dfs(0, '...'))
 

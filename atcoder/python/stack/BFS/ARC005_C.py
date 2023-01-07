@@ -1,4 +1,3 @@
-import sys
 h, w = map(int, input().split())
 
 maze = [["-"] * (w + 2) for _ in range(h + 2)]
@@ -20,7 +19,6 @@ while q:
     for x, y in q:
         for dx, dy in dir:
             next_x, next_y = x + dx, y + dy
-            
 
     q = next_q
 

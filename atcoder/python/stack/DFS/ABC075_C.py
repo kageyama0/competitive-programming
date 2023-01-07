@@ -9,6 +9,7 @@ for i in range(m):
     g[a].append(b)
     g[b].append(a)
 
+
 def dfs(start, end):
     q = []
     q.append(start)
@@ -29,10 +30,11 @@ def dfs(start, end):
                 q.append(next_v)
     return False
 
+
 ans = 0
-for a,b in e:
+for a, b in e:
     v = [0] * (n + 1)
-    if not dfs(a,b):
+    if not dfs(a, b):
         ans += 1
 
 print(ans)

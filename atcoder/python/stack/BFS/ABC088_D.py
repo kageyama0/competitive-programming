@@ -1,4 +1,5 @@
 import sys
+
 input = sys.stdin.readline
 
 h, w = map(int, input().split())
@@ -26,7 +27,7 @@ while q:
         for dx, dy in dir:
             next_x, next_y = x + dx, y + dy
             if maze[next_y][next_x] == ".":
-                print(next_y,next_x)
+                print(next_y, next_x)
                 next_q.add((next_y, next_x))
 
             if maze[next_y][next_x] == "goal":

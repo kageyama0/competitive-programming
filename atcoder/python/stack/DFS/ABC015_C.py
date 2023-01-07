@@ -4,16 +4,16 @@ t = [list(map(int, input().split())) for _ in range(n)]
 nums = t[0]
 A = []
 for i in range(1, n):
-  for x in t[i]:
-    for y in nums:
-      #print(nums,A)
-      A.append(int(x ^ y))
-  nums += A
+    for x in t[i]:
+        for y in nums:
+            # print(nums,A)
+            A.append(int(x ^ y))
+    nums += A
 
 if 0 in nums:
-  print("Found")
+    print("Found")
 else:
-  print("Nothing")
+    print("Nothing")
 
 
 # def dfs(numQ, ans):

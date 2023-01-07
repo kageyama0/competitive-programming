@@ -5,7 +5,8 @@ def find(x):
     else:
         return find(P[x])
 
-N, Q, *X = map(int,open(0).read().split())
+
+N, Q, *X = map(int, open(0).read().split())
 # Pに繋がっている頂点の最終地点まで記録する
 P = [-1] * N
 

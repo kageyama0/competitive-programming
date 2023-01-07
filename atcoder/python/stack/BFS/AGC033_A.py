@@ -1,4 +1,5 @@
 import sys
+
 input = sys.stdin.readline
 
 h, w = map(int, input().split())
@@ -18,7 +19,7 @@ while q:
     next_q = []
     cnt += 1
     for x, y in q:
-        for dx,dy in dir:
+        for dx, dy in dir:
             next_x, next_y = x + dx, y + dy
             if 0 <= next_y <= h - 1 and 0 <= next_x <= w - 1:
                 if M[next_y][next_x] == ".":

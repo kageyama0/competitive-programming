@@ -1,3 +1,4 @@
+# https://atcoder.jp/contests/abc032/tasks/abc032_c
 N, K = map(int, input().split())
 S = [int(input()) for _ in range(N)]
 

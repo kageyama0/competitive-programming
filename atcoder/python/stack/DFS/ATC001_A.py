@@ -29,35 +29,34 @@ while s:
 print('No')
 
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-from collections import deque
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-h,w = map(int,input().split())
-edge = ["#"] * (w + 2)
-map = [edge]
-for i in range(1, h + 1):
-    line = input()
-    map.append(list("#" + line + "#"))
-    if "s" in line:
-        # ここに注意！sx,syを逆に書くミスをしがち
-        sx = i
-        sy = line.index("s") + 1
-map.append(edge)
+# h, w = map(int, input().split())
+# edge = ["#"] * (w + 2)
+# map = [edge]
+# for i in range(1, h + 1):
+#     line = input()
+#     map.append(list("#" + line + "#"))
+#     if "s" in line:
+#         # ここに注意！sx,syを逆に書くミスをしがち
+#         sx = i
+#         sy = line.index("s") + 1
+# map.append(edge)
 
-stack = deque()
-stack.append((sx, sy))
-d = [(0, 1), (1, 0), (0, -1), (-1, 0)]
-while stack:
-    stack_x, stack_y = stack.pop()
-    for dx,dy in d:
-        next_x = stack_x + dx
-        next_y = stack_y + dy
-        if map[next_x][next_y] == "g":
-            print("Yes")
-            exit()
-        if map[next_x][next_y] == "#":
-            continue
-        stack.append((next_x,next_y))
-        map[next_x][next_y] = "#"
-    #print(stack)
-print("No")
+# stack = deque()
+# stack.append((sx, sy))
+# d = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+# while stack:
+#     stack_x, stack_y = stack.pop()
+#     for dx, dy in d:
+#         next_x = stack_x + dx
+#         next_y = stack_y + dy
+#         if map[next_x][next_y] == "g":
+#             print("Yes")
+#             exit()
+#         if map[next_x][next_y] == "#":
+#             continue
+#         stack.append((next_x, next_y))
+#         map[next_x][next_y] = "#"
+#     # print(stack)
+# print("No")

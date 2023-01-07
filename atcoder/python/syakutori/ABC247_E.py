@@ -1,8 +1,11 @@
 N, X, Y = map(int, input().split())
 A = list(map(int, input().split()))
 
-# Y以上X以下の数字だけでできた配列Bで何通りの部分配列が答えになるか
+
 def calc(B):
+    """
+    Y以上X以下の数字だけでできた配列Bで何通りの部分配列が答えになるか
+    """
     left, right, countX, countY, res = 0, 0, 0, 0, 0
 
     while left != len(B):

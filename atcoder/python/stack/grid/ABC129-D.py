@@ -1,11 +1,13 @@
-import numpy as np
 import sys
+
+import numpy as np
+
 buf = sys.stdin.buffer
 
-h,w = map(int,buf.readline().split())
+h, w = map(int, buf.readline().split())
 grid = np.array([list(input()) for _ in range(h)])
 grid = np.where(grid == ".", 1, 0)
-#print(grid)
+# print(grid)
 
 L, R, U, D = [np.zeros((h, w)) for _ in range(4)]
 for i in range(w):
@@ -13,8 +15,8 @@ for i in range(w):
     R[:, -i - 1] = (R[:, -i] + 1) * grid[:, -i - 1]
 
 for i in range(h):
-    D[i,:] = (D[i - 1,:] + 1) * grid[i,:]
-    U[-i - 1,:] = (U[-i,:] + 1) * grid[-i - 1,:]
+    D[i, :] = (D[i - 1, :] + 1) * grid[i, :]
+    U[-i - 1, :] = (U[-i, :] + 1) * grid[-i - 1, :]
 
 print(int(np.max(L + R + D + U) - 3))
 

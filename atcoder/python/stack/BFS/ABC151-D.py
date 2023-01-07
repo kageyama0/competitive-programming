@@ -1,12 +1,13 @@
-from collections import deque
 import sys
+from collections import deque
+
 buf = sys.stdin.buffer
 
 h, w = map(int, buf.readline().split())
 map = ""
 for _ in range(h):
     map += input() + "#"
-#print(map)
+# print(map)
 
 n = h * (w + 1)
 periods = [[] for _ in range(n)]
@@ -19,17 +20,20 @@ for i in range(n):
         if next_i < 0 or next_i >= n or map[next_i] == "#":
             continue
         periods[i].append(next_i)
-#print(periods)
+# print(periods)
 
 q = deque()
+
+
 def bfs(now_i):
     for next_i in periods[now_i]:
         if con_cnt[next_i] == -1:
             con_cnt[next_i] = con_cnt[now_i] + 1
             q.append(next_i)
-    #まだスタックが残っている場合、左から抜き出す
+    # まだスタックが残っている場合、左から抜き出す
     if q:
         bfs(q.popleft())
+
 
 start_points = [i for i, j in enumerate(periods) if len(j) > 0]
 ans = 0
@@ -42,7 +46,7 @@ for start_point in start_points:
 
 print(ans)
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # https://atcoder.jp/contests/abc151/submissions/9710366
 # from collections import deque
 # import sys
@@ -87,7 +91,7 @@ print(ans)
 # print(max_len)
 
 
-# # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # from collections import deque
 # import copy
@@ -131,11 +135,7 @@ print(ans)
 #     main()
 
 
-
-
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# from collections import deque
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # h,w = map(int,input().split())
 # edge = ["#"] * (w + 2)
 # map = [edge]

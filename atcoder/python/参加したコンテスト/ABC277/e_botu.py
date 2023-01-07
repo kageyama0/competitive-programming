@@ -39,7 +39,8 @@ while q != deque():
     # 繋がっている頂点があれば、全部いってみる
     for next, switch_restriction in graph[now].items():
         # print("---")
-        # print("繋がっている頂点にいってみる", f"[{next}]にはswitchがこの状態({switch_restriction})じゃないと通れない")
+        # print("繋がっている頂点にいってみる")
+        # print(f"[{next}]にはswitchがこの状態({switch_restriction})じゃないと通れない")
 
         # switchを押さないと通れない時
         if switch_restriction != switch_status:

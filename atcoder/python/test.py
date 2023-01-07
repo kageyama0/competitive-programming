@@ -1,20 +1,14 @@
 import time
 
-def make(S, n):
-    if n == k:
-        return st
-    else:
-        return st
 
 def main():
-    k, s, t = map(int, input().split())
-    lebel_k = "ABC"
-
-    for _ in range(k - 1):
-        lebel_k = "A" + lebel_k + "B" + lebel_k + "C"
-        print("lebel_k:",lebel_k)
-    ans = lebel_k[s - 1:t]
-    #print(ans)
+    a, b, c, d, e, f = 166.5, 168.2, 177.3, 164.9, 172.0, 165.4
+    ave = (a + b + c + d + e + f) / 6
+    print(ave)
+    s2 = ((a - ave) ** 2 + (b - ave) ** 2 + (c - ave) ** 2 + (d - ave) ** 2 + (e - ave) ** 2 + (f - ave) ** 2) // 6
+    print(s2)
+    s = s2 ** 0.5
+    print(s)
 
 
 if __name__ == "__main__":

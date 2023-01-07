@@ -1,5 +1,5 @@
 def main():
-    n = int(input())
+    _ = int(input())
     A = list(map(int, input().split()))
     lis = []
     for i, num in enumerate(A):

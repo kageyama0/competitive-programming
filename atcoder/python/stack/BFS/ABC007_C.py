@@ -14,5 +14,5 @@ while q:
         if graph[x + dx][y + dy] == ".":
             graph[x + dx][y + dy] = graph[x][y] + 1
             q.append([x + dx, y + dy])
-    #print(p)
-print(p[g0][g1])
+    # print(graph)
+print(graph[g0][g1])
