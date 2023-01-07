@@ -7,24 +7,30 @@ for i in range(d):
     scores.append([a, b])
     sum.append((i + 1) * 100 * a + b)
 
+
 def ans(goal, p_num):
+    # print(goal, p_num)
+
     if p_num <= 0:
         return float("INF")
 
-    # 一番スコアの高い問題を必要な分か、あるいは限界まで解く。
+    # n: 解く問題数。一番スコアの高い問題を必要な分か、あるいは限界まで解く。
     n = min(int(goal / (100 * p_num)), scores[p_num - 1][0])
 
-    # できる限りまで高得点問題を解いたときの特典
-    s = 100 * p_num * n
-
-    # 全部解いたら、ボーナスを追加した点数を s とする
+    # point: 全部解いた場合のボーナスを追加した点数
     if n == scores[p_num - 1][0]:
-        s = sum[p_num - 1]
+        point = sum[p_num - 1]
 
-    # まだgoalに達していなかった場合、再帰関数に放り込む
-    if goal > s:
-        n += ans(goal - s, p_num - 1)
+    # point: 一番スコアの高い問題をn問だけ中途半端に解いた場合の点数
+    else:
+        point = 100 * p_num * n
 
+    # まだgoalに達していなかった場合、余っているポイントと次に高得点な問題のインデックスを再帰関数に放り込む
+    if goal > point:
+        n += ans(goal - point, p_num - 1)
+
+    # 全く解かずに、次の問題に進むパターン
     return min(n, ans(goal, p_num - 1))
 
-print(ans(g, d))
+
+print(ans(g, d, 0))
