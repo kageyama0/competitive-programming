@@ -43,7 +43,7 @@ def check(size):
 ok, ng = 0, L + 1
 while ok + 1 < ng:
     x = (ok + ng) // 2
-    print("ok+ng/2:", x)
+    # print("ok+ng/2:", x)
     if (check(x) >= K + 1):
         ok = x
     else:
